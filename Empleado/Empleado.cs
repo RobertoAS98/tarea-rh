@@ -64,7 +64,11 @@ namespace Empleados
         {
             get {
                 // Calcular Antigüedad
-                int ant = 0;
+                //int ant = 0;
+                var fechadeInicio = new DateTime(2014, 1, 12);
+                var fechaHoy = DateTime.Today;
+                var ant = fechaHoy.Year - fechadeInicio.Year;
+                if (fechadeInicio.Date > fechaHoy.AddYears(-ant)) ant--;
                 return (short) ant;
             }
         }
@@ -74,8 +78,13 @@ namespace Empleados
             get 
             {
                 // Calcular edad
-                var edad = 0;
+                var fechadeInicio = new DateTime(1995, 8, 23);
+                var fechaHoy = DateTime.Today;
+                var edad = fechaHoy.Year - fechadeInicio.Year;
+                if (fechadeInicio.Date > fechaHoy.AddYears(-edad)) edad--;
                 return (short)edad;
+
+
             }
         }
 

@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using Xunit;
 using Empleados;
 
@@ -22,7 +22,7 @@ namespace EmpleadoTest
         {
             Empleado e = new Empleado(1000, "Joe", "Lee", new DateTime(1973, 8, 23), new DateTime(2014, 1, 12), 200);
             Assert.Equal(47, e.Edad);
-            Assert.Equal(7, e.Antigüedad);
+            Assert.Equal(7, e.AntigÃ¼edad);
             Assert.Equal(0.24m, Bono.calcBono(e));
         }
 
@@ -31,9 +31,9 @@ namespace EmpleadoTest
         {
             Empleado e = new Empleado(1000, "Joe", "Lee", new DateTime(1973, 8, 23), new DateTime(2014, 1, 12), 200);
             Assert.Equal(47, e.Edad);
-            Assert.Equal(7, e.Antigüedad);
+            Assert.Equal(7, e.AntigÃ¼edad);
             decimal bono;
-            Bono.calcBono(e.Antigüedad, e.Edad, out bono);
+            Bono.calcBono(e.AntigÃ¼edad, e.Edad, out bono);
             Assert.Equal(0.24m, bono);
         }
 
@@ -54,10 +54,10 @@ namespace EmpleadoTest
         }
 
         [Fact]
-        public void Antigüedad()
+        public void AntigÃ¼edad()
         {
             Empleado e = new Empleado(1000, "Ana", "Lee", new DateTime(1995, 8, 23), new DateTime(2014, 1, 12), 200);
-            Assert.Equal(7, e.Antigüedad);
+            Assert.Equal(7, e.AntigÃ¼edad);
         }
 
     }
